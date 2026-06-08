@@ -1,0 +1,23 @@
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+
+/**
+ * Green-tinted section header used in every data table page.
+ * Matches the Figma "All orders / All products / All suppliers / Customers Data" header row.
+ */
+const TableSectionHeader = ({ title }) => (
+  <Box
+    sx={{
+      px: '20px',
+      py: '14px',
+      backgroundColor: '#E7F1ED',
+      borderRadius: '8px 8px 0 0',
+    }}
+  >
+    <Typography sx={{ fontSize: 16, fontWeight: 600, color: '#1D1E21' }}>
+      {title}
+    </Typography>
+  </Box>
+);
+
+export default TableSectionHeader;
