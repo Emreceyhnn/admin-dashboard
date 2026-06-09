@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const supplierSchema = mongoose.Schema({
-  name: { type: String, required: true }, // Suppliers Info
+  name: { type: String, required: true }, 
   address: { type: String, required: true },
   company: { type: String, required: true },
   deliveryDate: { type: Date, required: true },

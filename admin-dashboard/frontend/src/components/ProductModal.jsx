@@ -4,7 +4,7 @@ import {
   Button, Typography, IconButton, Select, MenuItem, FormControl,
 } from '@mui/material';
 
-/* ─── Close icon ─── */
+
 const CloseIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
     <line x1="18" y1="6" x2="6" y2="18" stroke="#1D1E21" strokeWidth="2" strokeLinecap="round" />
@@ -63,7 +63,7 @@ const ProductModal = ({ open, handleClose, handleSave, editMode, currentProduct,
         },
       }}
     >
-      {/* Header */}
+      {}
       <Box
         sx={{
           px: '24px',
@@ -91,7 +91,7 @@ const ProductModal = ({ open, handleClose, handleSave, editMode, currentProduct,
         </IconButton>
       </Box>
 
-      {/* Form */}
+      {}
       <DialogContent sx={{ px: '24px', py: '20px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
         <TextField
           placeholder="Product Info"
@@ -140,7 +140,7 @@ const ProductModal = ({ open, handleClose, handleSave, editMode, currentProduct,
         />
       </DialogContent>
 
-      {/* Actions */}
+      {}
       <Box sx={{ px: '24px', pb: '24px', display: 'flex', gap: '8px' }}>
         <Button
           onClick={handleSave}

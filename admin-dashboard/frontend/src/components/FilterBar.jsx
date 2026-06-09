@@ -1,16 +1,14 @@
 import React from 'react';
 import { Box, TextField, Button } from '@mui/material';
 
-/* ─── Filter icon SVG (funnel) ─── */
+
 const FilterIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
     <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" fill="#fff" stroke="#fff" strokeWidth="0.5" />
   </svg>
 );
 
-/**
- * Reusable filter bar used across Orders, Products, Suppliers, Customers pages.
- */
+
 const FilterBar = ({ filterValue, onFilterChange, onFilter, placeholder = 'User Name', actionButton }) => {
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') onFilter();
@@ -27,7 +25,7 @@ const FilterBar = ({ filterValue, onFilterChange, onFilter, placeholder = 'User 
         flexWrap: 'wrap',
       }}
     >
-      {/* Left: Input + Filter button */}
+      {}
       <Box sx={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
         <TextField
           value={filterValue}
@@ -68,7 +66,7 @@ const FilterBar = ({ filterValue, onFilterChange, onFilter, placeholder = 'User 
         </Button>
       </Box>
 
-      {/* Right: Action button (optional) */}
+      {}
       {actionButton && <Box>{actionButton}</Box>}
     </Box>
   );

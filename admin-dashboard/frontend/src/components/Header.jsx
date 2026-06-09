@@ -4,7 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate, useLocation } from 'react-router-dom';
 import api from '../api/axios';
 
-/* ─── Inline SVG icons matching Figma ─── */
+
 const LogoutIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -35,7 +35,7 @@ const Header = ({ onMenuClick, isMobile }) => {
   const location = useLocation();
 
   const handleLogout = async () => {
-    try { await api.get('/user/logout'); } catch (e) { /* ignore */ }
+    try { await api.get('/user/logout'); } catch (e) {  }
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     navigate('/login');
@@ -60,7 +60,7 @@ const Header = ({ onMenuClick, isMobile }) => {
         zIndex: 1200,
       }}
     >
-      {/* Left: Logo + Title + Breadcrumb */}
+      {}
       <Box sx={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1 }}>
         {isMobile && (
           <IconButton onClick={onMenuClick} edge="start" sx={{ mr: '4px' }}>
@@ -113,7 +113,7 @@ const Header = ({ onMenuClick, isMobile }) => {
         </Box>
       </Box>
 
-      {/* Right: Logout */}
+      {}
       <IconButton
         onClick={handleLogout}
         sx={{

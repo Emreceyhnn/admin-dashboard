@@ -4,7 +4,7 @@ import {
   Button, Typography, IconButton,
 } from '@mui/material';
 
-/* ─── Close icon ─── */
+
 const CloseIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
     <line x1="18" y1="6" x2="6" y2="18" stroke="#1D1E21" strokeWidth="2" strokeLinecap="round" />
@@ -42,7 +42,7 @@ const CustomerModal = ({ open, handleClose, handleSave, currentCustomer, setCurr
         },
       }}
     >
-      {/* Header */}
+      {}
       <Box
         sx={{
           px: '24px',
@@ -70,7 +70,7 @@ const CustomerModal = ({ open, handleClose, handleSave, currentCustomer, setCurr
         </IconButton>
       </Box>
 
-      {/* Form */}
+      {}
       <DialogContent sx={{ px: '24px', py: '20px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
         <TextField
           placeholder="Name"
@@ -102,7 +102,7 @@ const CustomerModal = ({ open, handleClose, handleSave, currentCustomer, setCurr
         />
       </DialogContent>
 
-      {/* Actions */}
+      {}
       <Box sx={{ px: '24px', pb: '24px', display: 'flex', gap: '8px' }}>
         <Button
           onClick={handleSave}

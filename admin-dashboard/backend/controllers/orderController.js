@@ -2,7 +2,7 @@ import Order from '../models/Order.js';
 
 export const getOrders = async (req, res) => {
   try {
-    const { name } = req.query; // Filter by user name
+    const { name } = req.query; 
     let query = {};
     if (name) {
       query.userInfo = { $regex: name, $options: 'i' };

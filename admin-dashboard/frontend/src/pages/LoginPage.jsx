@@ -27,7 +27,7 @@ const schema = yup
   })
   .required();
 
-/* ─── Login Page ─── */
+
 const LoginPage = () => {
   const navigate = useNavigate();
   const theme = useTheme();
@@ -75,7 +75,7 @@ const LoginPage = () => {
         py: { xs: 4, md: 0 },
       }}
     >
-      {/* Top Left Header Logo */}
+      {}
       <Box
         sx={{
           position: "absolute",
@@ -105,7 +105,7 @@ const LoginPage = () => {
         </Typography>
       </Box>
 
-      {/* Bottom-right decorative shapes */}
+      {}
       <Box
         component="img"
         src="/elements.png"
@@ -133,7 +133,7 @@ const LoginPage = () => {
           gap: { xs: 6, lg: 4 },
         }}
       >
-        {/* Left Column: Typography */}
+        {}
         <Box sx={{ flex: 1, maxWidth: { xs: "100%", lg: 540 }, width: "100%" }}>
           <Box sx={{ position: "relative" }}>
             <Box
@@ -178,7 +178,7 @@ const LoginPage = () => {
           </Box>
         </Box>
 
-        {/* Right Column: Form */}
+        {}
         <Box
           sx={{
             width: "100%",

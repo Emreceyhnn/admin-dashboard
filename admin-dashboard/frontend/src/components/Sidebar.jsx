@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Tooltip, Drawer } from '@mui/material';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-/* ─── SVG icons matching Figma sidebar icons ─── */
+
 const DashboardIcon = ({ active }) => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
     <rect x="3" y="3" width="7" height="7" rx="1" stroke={active ? '#fff' : '#1D1E21'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -107,7 +107,7 @@ const Sidebar = ({ mobileOpen, onClose, isMobile }) => {
 
   return (
     <Box component="nav" sx={{ width: { md: 'var(--sidebar-width)' }, flexShrink: { md: 0 } }}>
-      {/* Mobile drawer */}
+      {}
       <Drawer
         variant="temporary"
         open={mobileOpen}
@@ -126,7 +126,7 @@ const Sidebar = ({ mobileOpen, onClose, isMobile }) => {
       >
         {drawerContent}
       </Drawer>
-      {/* Desktop drawer */}
+      {}
       <Drawer
         variant="permanent"
         sx={{

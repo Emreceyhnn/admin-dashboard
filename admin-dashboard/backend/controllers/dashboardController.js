@@ -16,7 +16,7 @@ export const getDashboardStats = async (req, res) => {
 
     const recentCustomers = await Customer.find().sort({ createdAt: -1 }).limit(5);
 
-    // Load Income/Expenses from seed JSON
+    
     const incomeExpensesRaw = JSON.parse(
       fs.readFileSync(path.join(__dirname, '..', 'seed', 'Income-Expenses.json'), 'utf-8')
     );

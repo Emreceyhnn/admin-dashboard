@@ -90,7 +90,7 @@ const CustomersDataPage = () => {
             <TableBody>
               {paginated.map(row => (
                 <TableRow key={row._id} sx={{ '&:last-child td': { borderBottom: 0 } }}>
-                  {/* User Info */}
+                  {}
                   <TableCell sx={bodyCellSx}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <Avatar
@@ -141,7 +141,7 @@ const CustomersDataPage = () => {
           </Table>
         </TableContainer>
 
-        {/* Pagination */}
+        {}
         {totalPages > 1 && (
           <Box sx={{ display: 'flex', justifyContent: 'center', py: '12px', borderTop: '1px solid rgba(29,30,33,0.08)' }}>
             <Pagination

@@ -33,7 +33,7 @@ const importData = async () => {
       password: hashedPassword,
     });
 
-    // Read JSON files
+    
     const customersData = JSON.parse(fs.readFileSync(path.join(__dirname, 'seed', 'customers.json'), 'utf-8'));
     const ordersData = JSON.parse(fs.readFileSync(path.join(__dirname, 'seed', 'orders.json'), 'utf-8'));
     const productsData = JSON.parse(fs.readFileSync(path.join(__dirname, 'seed', 'products.json'), 'utf-8'));

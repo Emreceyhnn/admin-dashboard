@@ -14,7 +14,7 @@ import {
 } from '@mui/material';
 import api from '../api/axios';
 
-/* ─── SVG Icons matching Figma ─── */
+
 const ProductsIcon = () => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
     <path
@@ -83,7 +83,7 @@ const CustomersIcon = () => (
   </svg>
 );
 
-/* ─── Stat Card ─── */
+
 const StatCard = ({ title, value, icon: Icon, iconBg }) => (
   <Paper
     elevation={0}
@@ -142,7 +142,7 @@ const StatCard = ({ title, value, icon: Icon, iconBg }) => (
   </Paper>
 );
 
-/* ─── Section Table Container ─── */
+
 const SectionTable = ({ title, children }) => (
   <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
     <Box
@@ -173,7 +173,7 @@ const SectionTable = ({ title, children }) => (
   </Box>
 );
 
-/* ─── Header cell style ─── */
+
 const headCellSx = {
   color: 'rgba(29, 30, 33, 0.40)',
   fontWeight: 500,
@@ -191,7 +191,7 @@ const bodyCellSx = {
   fontSize: 16,
 };
 
-/* ─── Dashboard Page ─── */
+
 const DashboardPage = () => {
   const [data, setData] = useState({
     stats: null,
@@ -220,7 +220,7 @@ const DashboardPage = () => {
 
   return (
     <Box>
-      {/* ─── Stat Cards ─── */}
+      {}
       <Box
         sx={{
           display: 'flex',
@@ -249,7 +249,7 @@ const DashboardPage = () => {
         />
       </Box>
 
-      {/* ─── Tables Row ─── */}
+      {}
       <Box
         sx={{
           display: 'flex',
@@ -257,7 +257,7 @@ const DashboardPage = () => {
           flexDirection: { xs: 'column', lg: 'row' },
         }}
       >
-        {/* Recent Customers */}
+        {}
         <Box sx={{ flex: { lg: '1 1 60%' }, minWidth: 0 }}>
           <SectionTable title="Recent Customers">
             <Table>
@@ -330,7 +330,7 @@ const DashboardPage = () => {
           </SectionTable>
         </Box>
 
-        {/* Income / Expenses */}
+        {}
         <Box sx={{ flex: { lg: '1 1 40%' }, minWidth: 0 }}>
           <SectionTable title="Income/Expenses">
             <Table>

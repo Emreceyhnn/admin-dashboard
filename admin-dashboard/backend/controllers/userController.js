@@ -2,8 +2,8 @@ import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 import bcrypt from 'bcrypt';
 
-// Note: For real world use, you'd hash the password on signup and compare on login.
-// Since there's no signup required, we'll assume a seeder will seed a user.
+
+
 
 export const login = async (req, res) => {
   const { email, password } = req.body;

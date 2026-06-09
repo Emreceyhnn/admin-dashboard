@@ -5,7 +5,7 @@ import {
 } from '@mui/material';
 import dayjs from 'dayjs';
 
-/* ─── Close icon ─── */
+
 const CloseIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
     <line x1="18" y1="6" x2="6" y2="18" stroke="#1D1E21" strokeWidth="2" strokeLinecap="round" />
@@ -59,7 +59,7 @@ const SupplierModal = ({ open, handleClose, handleSave, editMode, currentSupplie
         },
       }}
     >
-      {/* Header */}
+      {}
       <Box
         sx={{
           px: '24px',
@@ -87,7 +87,7 @@ const SupplierModal = ({ open, handleClose, handleSave, editMode, currentSupplie
         </IconButton>
       </Box>
 
-      {/* Form */}
+      {}
       <DialogContent sx={{ px: '24px', py: '20px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
         <TextField
           placeholder="Suppliers Info"
@@ -140,7 +140,7 @@ const SupplierModal = ({ open, handleClose, handleSave, editMode, currentSupplie
         </FormControl>
       </DialogContent>
 
-      {/* Actions */}
+      {}
       <Box sx={{ px: '24px', pb: '24px', display: 'flex', gap: '8px' }}>
         <Button
           onClick={handleSave}

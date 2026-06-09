@@ -91,7 +91,7 @@ const AllOrdersPage = () => {
                 const st = getStatus(row.status);
                 return (
                   <TableRow key={row._id} sx={{ '&:last-child td': { borderBottom: 0 } }}>
-                    {/* User Info */}
+                    {}
                     <TableCell sx={bodyCellSx}>
                       <Box sx={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                         <Avatar
@@ -108,19 +108,19 @@ const AllOrdersPage = () => {
                         <Box sx={{ fontSize: 16, fontWeight: 500, color: '#1D1E21' }}>{row.userInfo}</Box>
                       </Box>
                     </TableCell>
-                    {/* Address */}
+                    {}
                     <TableCell sx={{ ...bodyCellSx, maxWidth: 160, color: 'rgba(29,30,33,0.40)' }}>{row.address}</TableCell>
-                    {/* Products */}
+                    {}
                     <TableCell sx={{ ...bodyCellSx, color: '#1D1E21' }}>{row.products}</TableCell>
-                    {/* Order date */}
+                    {}
                     <TableCell sx={{ ...bodyCellSx, whiteSpace: 'nowrap', color: 'rgba(29,30,33,0.40)' }}>
                       {row.orderDate ? dayjs(row.orderDate).format('MMM D, YYYY') : '—'}
                     </TableCell>
-                    {/* Price */}
+                    {}
                     <TableCell sx={{ ...bodyCellSx, fontWeight: 600, color: '#1D1E21' }}>
                       {row.price != null ? `$${Number(row.price).toFixed(2)}` : '—'}
                     </TableCell>
-                    {/* Status */}
+                    {}
                     <TableCell sx={bodyCellSx}>
                       <Chip
                         label={st.label}
