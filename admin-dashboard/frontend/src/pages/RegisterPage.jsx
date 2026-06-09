@@ -16,6 +16,7 @@ import api from "../api/axios";
 
 const schema = yup
   .object({
+    name: yup.string().required("Name is required"),
     email: yup
       .string()
       .email("Must be a valid email")
@@ -27,8 +28,7 @@ const schema = yup
   })
   .required();
 
-
-const LoginPage = () => {
+const RegisterPage = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -47,14 +47,14 @@ const LoginPage = () => {
     try {
       setLoading(true);
       setErrorMsg("");
-      const response = await api.post("/user/login", data);
+      const response = await api.post("/user/register", data);
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data));
       navigate("/dashboard");
     } catch (error) {
       setErrorMsg(
         error.response?.data?.message ||
-          "Login failed. Please check your credentials.",
+          "Registration failed. Please try again.",
       );
     } finally {
       setLoading(false);
@@ -75,7 +75,6 @@ const LoginPage = () => {
         py: { xs: 4, md: 0 },
       }}
     >
-      {}
       <Box
         sx={{
           position: "absolute",
@@ -105,7 +104,6 @@ const LoginPage = () => {
         </Typography>
       </Box>
 
-      {}
       <Box
         component="img"
         src="/elements.png"
@@ -133,7 +131,6 @@ const LoginPage = () => {
           gap: { xs: 6, lg: 4 },
         }}
       >
-        {}
         <Box sx={{ flex: 1, maxWidth: { xs: "100%", lg: 540 }, width: "100%" }}>
           <Box sx={{ position: "relative" }}>
             <Box
@@ -178,7 +175,6 @@ const LoginPage = () => {
           </Box>
         </Box>
 
-        {}
         <Box
           sx={{
             width: "100%",
@@ -199,10 +195,34 @@ const LoginPage = () => {
             sx={{ display: "flex", flexDirection: "column", gap: "16px" }}
           >
             <TextField
-              id="login-email"
+              id="register-name"
+              placeholder="Full Name"
+              autoComplete="name"
+              autoFocus
+              {...register("name")}
+              error={!!errors.name}
+              helperText={errors.name?.message}
+              inputProps={{ "aria-label": "Full Name" }}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  height: 48,
+                  borderRadius: "60px",
+                  backgroundColor: "#fff",
+                  "& fieldset": { border: "none" },
+                  "&.Mui-focused fieldset": { border: "2px solid #59B17A" },
+                  boxShadow: "0px 4px 12px rgba(0,0,0,0.02)",
+                },
+                "& input": {
+                  padding: "0 24px",
+                  fontSize: 14,
+                  "&::placeholder": { color: "#9CA3AF", opacity: 1 },
+                },
+              }}
+            />
+            <TextField
+              id="register-email"
               placeholder="Email address"
               autoComplete="email"
-              autoFocus
               {...register("email")}
               error={!!errors.email}
               helperText={errors.email?.message}
@@ -224,10 +244,10 @@ const LoginPage = () => {
               }}
             />
             <TextField
-              id="login-password"
+              id="register-password"
               placeholder="Password"
               type="password"
-              autoComplete="current-password"
+              autoComplete="new-password"
               {...register("password")}
               error={!!errors.password}
               helperText={errors.password?.message}
@@ -249,7 +269,7 @@ const LoginPage = () => {
               }}
             />
             <Button
-              id="login-submit"
+              id="register-submit"
               type="submit"
               variant="contained"
               fullWidth
@@ -266,22 +286,22 @@ const LoginPage = () => {
                 "&:hover": { backgroundColor: "#4a9566", boxShadow: "none" },
               }}
             >
-              {loading ? "Logging in..." : "Log in"}
+              {loading ? "Registering..." : "Register"}
             </Button>
             <Typography
               variant="body2"
               sx={{ textAlign: "center", mt: 2, color: "#6B7280" }}
             >
-              Don't have an account?{" "}
+              Already have an account?{" "}
               <Link
-                to="/register"
+                to="/login"
                 style={{
                   color: "#59B17A",
                   textDecoration: "none",
                   fontWeight: 600,
                 }}
               >
-                Register
+                Log in
               </Link>
             </Typography>
           </Box>
@@ -291,4 +311,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
