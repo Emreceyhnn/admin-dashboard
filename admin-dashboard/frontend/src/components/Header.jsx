@@ -34,6 +34,9 @@ const Header = ({ onMenuClick, isMobile }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const user = JSON.parse(localStorage.getItem('user') || '{}');
+  const userEmail = user.email || 'vendor@gmail.com';
+
   const handleLogout = async () => {
     try { await api.get('/user/logout'); } catch (e) {  }
     localStorage.removeItem('token');
@@ -104,7 +107,7 @@ const Header = ({ onMenuClick, isMobile }) => {
                     |
                   </Typography>
                   <Typography component="span" sx={{ fontSize: 12, color: 'rgba(29,30,33,0.40)' }}>
-                    vendor@gmail.com
+                    {userEmail}
                   </Typography>
                 </>
               )}
